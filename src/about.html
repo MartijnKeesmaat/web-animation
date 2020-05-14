@@ -21,8 +21,8 @@
       </a>
       <nav>
         <ol start="0">
-          <li class="nav-link"><a href="">Introduction</a></li>
-          <li class="nav-link"><a href="">Vectors</a></li>
+          <li class="nav-link"><a href="index.html">Introduction</a></li>
+          <li class="nav-link"><a href="about.html">Vectors</a></li>
           <li class="nav-link"><a href="">Forces</a></li>
           <li class="nav-link"><a href="">Oscillation</a></li>
           <li class="nav-link"><a href="">Particle Systems</a></li>
@@ -41,6 +41,46 @@
       </section>
     </aside>
 
-    <main data-barba="container" data-barba-namespace="about"></main>
+    <main data-barba="container" data-barba-namespace="about">
+      <article class="sketch">
+        <div class="sketch__top">
+          <h1 class="sketch__title">Random Walker</h1>
+          <button class="sketch__refresh">Refresh the Sketch</button>
+        </div>
+        <canvas class="sketch__canvas"></canvas>
+        <div class="sketch__bottom">
+          <p class="sketch__desc">A random pattern will be drawn each time</p>
+        </div>
+      </article>
+
+      <article class="sketch-details">
+        <div class="sketch-details__top">
+          <button class="sketch-details__btn sketch-details__btn--active">About this Project</button>
+          <button class="sketch-details__btn">Settings</button>
+        </div>
+        <div class="sketch-details__middle">
+          <p>
+            A random walker is an entity that follows a path based on a randomly generated input. This one simply draws a single point moves 5 steps and draws another.
+            This is done based on a number generator which ranges from 1 to 4. For each number it will move into a direction.
+          </p>
+          <div class="sketch-arrows">
+            <button class="sketch-arrow sketch-arrow--left">
+              <a href="about.html">
+                <img src="assets/img/arrow-left.svg" alt="" />
+              </a>
+            </button>
+            <button class="sketch-arrow sketch-arrow--right">
+              <a href="about.html">
+                <img src="assets/img/arrow-right.svg" alt="" />
+              </a>
+            </button>
+          </div>
+        </div>
+        <div class="sketch-details__bottom">
+          <p>Find out how this feature works by learning from Daniel Shiffman</p>
+          <p>/Users/martijn/Google\ Drive/CMD/minor/bewegende-dingen-vak/sketch06</p>
+        </div>
+      </article>
+    </main>
   </body>
 </html>
