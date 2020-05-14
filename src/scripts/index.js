@@ -2,6 +2,7 @@ import '../styles/index.sass';
 import './pace.min.js';
 import gsap from 'gsap';
 import barba from '@barba/core';
+// import './walker.js';
 
 function pageTransition() {
   var tl = gsap.timeline();
