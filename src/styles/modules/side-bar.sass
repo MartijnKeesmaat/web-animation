@@ -1,0 +1,46 @@
+aside
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  height: 100vh
+  padding: 3.8rem 0 3.8rem 6.2rem
+  width: 34.1rem
+  border-right: 1px solid rgba(#FF373D, .4)
+
+  .logo
+    height: 35px
+
+  nav ol
+    position: relative
+    padding-left: calc(4.2rem + 1.3rem)
+    left: -4.2rem
+
+.nav-link
+  font-family: FuturaNewMedium-Reg
+  font-size: 1.5rem
+  color: rgba(#FF373D, .5)
+
+  a
+    line-height: 27px
+    color: rgba(#FF373D, .5)
+
+  &:first-of-type
+    color: #FF373D
+
+    a
+      color: #FF373D
+
+.nav-link--inactive
+  text-decoration: line-through
+
+.socials
+
+  a
+    display: inline-block
+    margin-right: 1.05rem
+    transition: .3s all ease
+
+    &:hover
+      transform: scale(1.5)
+
+    img

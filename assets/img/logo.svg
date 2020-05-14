@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="143px" height="32px" viewBox="0 0 143 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>Group 6</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.600000024">
+        <g id="Tabless-Copy-11" transform="translate(-62.000000, -41.000000)">
+            <g id="Group-4" transform="translate(62.000000, 38.000000)">
+                <g id="Group-6">
+                    <text id="The-Nature-of-Code" font-family="FuturaNewMedium-Reg, Futura New" font-size="15" font-weight="400" fill="#FF373D">
+                        <tspan x="0" y="14">THE NATURE OF CODE</tspan>
+                    </text>
+                    <text id="By-Daniel-Shiffman" font-family="FuturaNewBook-Reg, Futura New" font-size="14" font-weight="300" fill="#FF373D">
+                        <tspan x="37.988" y="31">By Daniel Shiffman</tspan>
+                    </text>
+                    <line x1="0.5" y1="26.5" x2="31.5" y2="26.5" id="Line" stroke="#FF373D" stroke-linecap="square"></line>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

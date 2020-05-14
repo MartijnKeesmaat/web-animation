@@ -15,13 +15,43 @@
       <li></li>
     </ul>
 
-    <header>
-      <p>Logo</p>
-    </header>
+    <aside>
+      <a href="index.html">
+        <img src="assets/img/logo.svg" />
+      </a>
+      <nav>
+        <ol start="0">
+          <li class="nav-link"><a href="">Introduction</a></li>
+          <li class="nav-link"><a href="">Vectors</a></li>
+          <li class="nav-link"><a href="">Forces</a></li>
+          <li class="nav-link"><a href="">Oscillation</a></li>
+          <li class="nav-link"><a href="">Particle Systems</a></li>
+          <li class="nav-link nav-link--inactive"><a href="">Physics Libraries</a></li>
+          <li class="nav-link nav-link--inactive"><a href="">Autonomous Agents</a></li>
+          <li class="nav-link nav-link--inactive"><a href="">Cellular Automata</a></li>
+          <li class="nav-link nav-link--inactive"><a href="">Fractals</a></li>
+          <li class="nav-link nav-link--inactive"><a href="">The Evolution of Code</a></li>
+          <li class="nav-link nav-link--inactive"><a href=""> Neural Networks</a></li>
+        </ol>
+      </nav>
+      <section class="socials">
+        <a href=""><img src="assets/img/socials/notes.svg" alt="" /></a>
+        <a href=""><img src="assets/img/socials/github.svg" alt="" /></a>
+        <a href=""><img src="assets/img/socials/codepen.svg" alt="" /></a>
+      </section>
+    </aside>
 
     <main data-barba="container" data-barba-namespace="home">
-      <h1>Home</h1>
-      <a href="about.html">link</a>
+      <article class="sketch">
+        <div class="sketch__top">
+          <h1 class="sketch__title">Random Walker</h1>
+          <button class="sketch__refresh">Refresh the Sketch</button>
+        </div>
+        <canvas class="sketch__canvas"></canvas>
+        <div class="sketch__bottom">
+          <p class="sketch__desc">A random pattern will be drawn each time</p>
+        </div>
+      </article>
     </main>
   </body>
 </html>
