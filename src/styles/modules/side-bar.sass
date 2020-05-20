@@ -2,45 +2,54 @@ aside
   display: flex
   flex-direction: column
   justify-content: space-between
+
+  width: 34.8rem
   height: 100vh
   padding: 3.8rem 0 3.8rem 6.2rem
-  width: 34.8rem
-  border-right: 1px solid rgba(#FF373D, .4)
+
+  border-right: 1px solid rgba(var(--color-main), .4)
 
   .logo
     height: 35px
 
   nav ol
     position: relative
-    padding-left: calc(4.2rem + 1.3rem)
     left: -4.2rem
 
+    padding-left: calc(4.2rem + 1.3rem)
+
 .nav-link
+  color: rgba(var(--color-main), .5)
+
   font-family: FuturaNewMedium-Reg
   font-size: 1.5rem
-  color: rgba(#FF373D, .5)
 
   a
+    color: rgba(var(--color-main), .5)
+
     line-height: 27px
-    color: rgba(#FF373D, .5)
 
   &:first-of-type
-    color: #FF373D
+    color: var(--color-main)
 
     a
-      color: #FF373D
+      color: var(--color-main)
 
 .nav-link--inactive
   text-decoration: line-through
 
 .socials
+  max-width: 100px
+  padding-top: 19px
+
+  border-top: 1px solid rgba(var(--color-main), 0.4)
 
   a
     display: inline-block
+
     margin-right: 1.05rem
+
     transition: .3s all ease
 
     &:hover
       transform: scale(1.5)
-
-    img

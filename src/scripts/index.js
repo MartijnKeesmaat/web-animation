@@ -20,6 +20,7 @@ function pageTransition() {
     delay: 0.1,
   });
 }
+3;
 
 function contentAnimation() {
   gsap.from('main', {

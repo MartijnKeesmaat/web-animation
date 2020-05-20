@@ -20,41 +20,41 @@ function draw() {
 }
 
 function Walker() {
-  this.x = width / 2;
-  this.y = height / 2;
+  this.x = random(width);
+  this.y = random(height);
 }
 
 let count = 0;
 Walker.prototype.render = function () {
   strokeWeight(2);
-  stroke('#FF373D');
-  if (mouseIsPressed) stroke('purple');
+  stroke(`rgba(255, 55, 61, 1)`);
+  if (mouseIsPressed) strokeWeight(3);
   point(this.x, this.y);
 };
 
-const stepX = 5;
-const stepY = 5;
+const stepX = 6;
+const stepY = 6;
+
+Walker.prototype.reset = function () {
+  this.x = random(width);
+  this.y = random(height);
+};
 
 Walker.prototype.step = function (x, y) {
   const choice = Math.floor(random(4));
 
-  if (choice == 0) {
+  if (choice === 0) {
     this.x += stepX;
-  } else if (choice == 1) {
+  } else if (choice === 1) {
     this.x -= stepX;
-  } else if (choice == 2) {
+  } else if (choice === 2) {
     this.y += stepY;
   } else {
     this.y -= stepY;
   }
 
-  if (this.x > width) resetSketch();
-  if (this.y > height) resetSketch();
-  if (this.x < 0) resetSketch();
-  if (this.y < 0) resetSketch();
+  if (this.x > width) this.reset();
+  if (this.y > height) this.reset();
+  if (this.x < 0) this.reset();
+  if (this.y < 0) this.reset();
 };
-
-function resetSketch() {
-  background('#f0f0ec');
-  walker = new Walker();
-}
