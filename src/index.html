@@ -8,16 +8,33 @@
     <meta name="author" content="Martijn Keesmaat" />
   </head>
 
-  <body data-barba="wrapper" class="is-loading">
+  <body class="is-loading">
     <div class="loading">
       <p>Loading...</p>
     </div>
 
-    <ul class="transition">
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
+    <header class="mobile-header">
+      <a href="index.html">
+        <img src="assets/img/logo.svg" />
+      </a>
+      <div class="ham">HAM</div>
+      <nav class="mobile-nav">
+        <ol start="0">
+          <li class="nav-link nav-link--active"><a href="index.html">Cover</a></li>
+          <li class="nav-link"><a href="introduction.html">Introduction</a></li>
+          <li class="nav-link"><a href="about.html">Vectors</a></li>
+          <li class="nav-link"><a href="">Forces</a></li>
+          <li class="nav-link"><a href="">Oscillation</a></li>
+          <li class="nav-link"><a href="">Particle Systems</a></li>
+          <li class="nav-link nav-link--inactive"><a href="">Physics Libraries</a></li>
+          <li class="nav-link nav-link--inactive"><a href="">Autonomous Agents</a></li>
+          <li class="nav-link nav-link--inactive"><a href="">Cellular Automata</a></li>
+          <li class="nav-link nav-link--inactive"><a href="">Fractals</a></li>
+          <li class="nav-link nav-link--inactive"><a href="">The Evolution of Code</a></li>
+          <li class="nav-link nav-link--inactive"><a href=""> Neural Networks</a></li>
+        </ol>
+      </nav>
+    </header>
 
     <aside>
       <a href="index.html">
@@ -25,7 +42,7 @@
       </a>
       <nav>
         <ol start="0">
-          <li class="nav-link"><a href="index.html">Cover</a></li>
+          <li class="nav-link nav-link--active"><a href="index.html">Cover</a></li>
           <li class="nav-link"><a href="introduction.html">Introduction</a></li>
           <li class="nav-link"><a href="about.html">Vectors</a></li>
           <li class="nav-link"><a href="">Forces</a></li>
@@ -40,19 +57,20 @@
         </ol>
       </nav>
       <section class="socials">
-        <a href=""><img src="assets/img/socials/notes.svg" alt="" /></a>
-        <a href=""><img src="assets/img/socials/github.svg" alt="" /></a>
-        <a href=""><img src="assets/img/socials/codepen.svg" alt="" /></a>
+        <a href="https://github.com/MartijnKeesmaat/web-animation"><img src="assets/img/socials/github.svg" alt="" /></a>
+        <a href="https://codepen.io/collection/DQaGxw"><img src="assets/img/socials/codepen.svg" alt="" /></a>
+        <a href="https://editor.p5js.org/MAKE/sketches"><img src="assets/img/socials/p5.svg" alt="" /></a>
+        <a href="https://www.notion.so/martijnkeesmaat/Nature-of-Code-3cb8fbeba1704e15a2974ce85e5ee3fd"><img src="assets/img/socials/notes.svg" alt="" /></a>
       </section>
     </aside>
 
-    <main data-barba="container" data-barba-namespace="home">
+    <main>
       <article class="sketch">
         <div class="sketch__poster">
           <div class="sketch__top">
             <div class="sketch__things">
               <h1 class="sketch__title">after the mass-age</h1>
-              <p>chris riley</p>
+              <p class="sketch__author">chris riley</p>
             </div>
 
             <button class="sketch__refresh">Refresh the Sketch</button>
@@ -92,17 +110,11 @@
           <p>/Users/martijn/Google\ Drive/CMD/minor/bewegende-dingen-vak/sketch06</p>
         </div>
       </article>
-
-      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
-        <script src="src/scripts/6-main/Particle.js"></script>
-        <script src="src/scripts/6-main/ParticleSystem.js"></script>
-        <script src="src/scripts/6-main/sketch.js"></script> -->
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
     <script src="src/scripts/6-main/Particle.js"></script>
     <script src="src/scripts/6-main/ParticleSystem.js"></script>
     <script src="src/scripts/6-main/sketch.js"></script>
-    <script src="src/scripts/walker.js"></script>
   </body>
 </html>

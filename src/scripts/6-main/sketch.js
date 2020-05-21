@@ -1,5 +1,7 @@
 let system;
 
+const isDarkMode = document.body.classList.contains('dark-mode');
+
 function setup() {
   const canvas = document.querySelector('#sketch__canvas-cover');
   const cnv = createCanvas(canvas.offsetWidth, canvas.offsetHeight);
@@ -8,6 +10,7 @@ function setup() {
 }
 
 function draw() {
-  background('#f0f0ec');
+  if (isDarkMode) background('#020202');
+  else background('#f0f0ec');
   system.run();
 }

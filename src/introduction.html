@@ -8,7 +8,7 @@
     <meta name="author" content="Martijn Keesmaat" />
   </head>
 
-  <body data-barba="wrapper">
+  <body class="is-loading">
     <div class="loading">
       <p>Loading...</p>
     </div>
@@ -26,7 +26,7 @@
       <nav>
         <ol start="0">
           <li class="nav-link"><a href="index.html">Cover</a></li>
-          <li class="nav-link"><a href="introduction.html">Introduction</a></li>
+          <li class="nav-link nav-link--active"><a href="introduction.html">Introduction</a></li>
           <li class="nav-link"><a href="about.html">Vectors</a></li>
           <li class="nav-link"><a href="">Forces</a></li>
           <li class="nav-link"><a href="">Oscillation</a></li>
@@ -46,7 +46,7 @@
       </section>
     </aside>
 
-    <main data-barba="container" data-barba-namespace="introduction">
+    <main>
       <article class="sketch">
         <div class="sketch__poster">
           <div class="sketch__top">
@@ -96,6 +96,7 @@
       <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
         <script src="src/scripts/walker.js"></script> -->
     </main>
-    <div class="scripts"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+    <script src="src/scripts/walker.js"></script>
   </body>
 </html>

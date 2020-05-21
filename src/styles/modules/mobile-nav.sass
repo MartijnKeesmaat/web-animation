@@ -1,0 +1,29 @@
+.mobile-header
+  position: fixed
+
+  display: none
+
+  img
+    display: none
+
+.mobile-nav
+  position: relative
+  position: fixed
+  z-index: 1
+  top: 0
+  right: 0
+
+  width: 250px
+  height: 100vh
+  padding: 30px
+
+  transform: translateX(100%)
+
+  background: #f0f0ec
+
+@media(max-width: 1100px)
+  .mobile-header
+    top: 30px
+    right: 30px
+
+    display: block

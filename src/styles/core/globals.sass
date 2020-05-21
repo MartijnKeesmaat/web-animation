@@ -251,3 +251,24 @@ table
 main
   display: flex
   flex: 1
+
+@media(max-width: 550px)
+  body
+    overflow: initial
+    flex-direction: column
+
+  main
+    flex-direction: column
+
+  .sketch__canvas
+    height: 480px !important
+
+  .sketch-details
+    display: block
+
+  .sketch
+    height: initial !important
+    padding: 30px !important
+
+  .sketch__bottom
+    display: none !important

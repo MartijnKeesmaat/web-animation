@@ -3,10 +3,12 @@ class ParticleSystem {
     this.origin = createVector(x, y);
     this.particles = [];
     this.grid = [];
+
     this.size = 2.5;
     this.spacing = 15;
     this.lengthX = width / (this.size + this.spacing);
     this.lengthY = height / (this.size + this.spacing);
+
     this.createGrid();
 
     this.grid.forEach((particleRow) => {

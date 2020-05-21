@@ -1,114 +1,114 @@
 import '../styles/index.sass';
 import './pace.min.js';
 import gsap from 'gsap';
-import barba from '@barba/core';
+// import barba from '@barba/core';
 
 import { loadWalker } from './walker';
 
 // const scriptContainer = document.querySelector('.scripts');
 // import './walker.js';
 
-function pageTransition() {
-  var tl = gsap.timeline();
-  tl.to('ul.transition li', {
-    duration: 0.5,
-    scaleX: 1,
-    transformOrigin: 'top left',
-    stagger: 0.2,
-  });
-  tl.to('ul.transition li', {
-    duration: 0.5,
-    scaleX: 0,
-    transformOrigin: 'top left',
-    stagger: 0.1,
-    delay: 0.1,
-  });
-}
-3;
+// function pageTransition() {
+//   var tl = gsap.timeline();
+//   tl.to('ul.transition li', {
+//     duration: 0.5,
+//     scaleX: 1,
+//     transformOrigin: 'top left',
+//     stagger: 0.2,
+//   });
+//   tl.to('ul.transition li', {
+//     duration: 0.5,
+//     scaleX: 0,
+//     transformOrigin: 'top left',
+//     stagger: 0.1,
+//     delay: 0.1,
+//   });
+// }
+// 3;
 
-function contentAnimation() {
-  gsap.from('main', {
-    duration: 0.2,
-    y: 30,
-    autoAlpha: 0,
-    delay: 0.5,
-  });
-}
+// function contentAnimation() {
+//   gsap.from('main', {
+//     duration: 0.2,
+//     y: 30,
+//     autoAlpha: 0,
+//     delay: 0.5,
+//   });
+// }
 
-function delay(n) {
-  n = n || 2000;
-  return new Promise((done) => {
-    setTimeout(() => {
-      done();
-    }, n);
-  });
-}
+// function delay(n) {
+//   n = n || 2000;
+//   return new Promise((done) => {
+//     setTimeout(() => {
+//       done();
+//     }, n);
+//   });
+// }
 
-barba.init({
-  sync: true,
+// barba.init({
+//   sync: true,
 
-  to: {
-    namespace: ['home'],
-  },
+//   to: {
+//     namespace: ['home'],
+//   },
 
-  transitions: [
-    {
-      async leave(data) {
-        const done = this.async();
-        // scriptContainer.innerHTML = '';
+//   transitions: [
+//     {
+//       async leave(data) {
+//         const done = this.async();
+//         // scriptContainer.innerHTML = '';
 
-        pageTransition();
-        await delay(1000);
-        done();
-      },
+//         pageTransition();
+//         await delay(1000);
+//         done();
+//       },
 
-      async enter({ current, next, trigger }) {
-        contentAnimation();
-        // console.log(next);
+//       async enter({ current, next, trigger }) {
+//         contentAnimation();
+//         // console.log(next);
 
-        console.log(next.namespace);
-        if (next.namespace === 'introduction') {
-          loadWalker();
-        }
+//         console.log(next.namespace);
+//         if (next.namespace === 'introduction') {
+//           loadWalker();
+//         }
 
-        // setTimeout(() => {
-        //   if (next.namespace === 'home')
-        //     loadScripts([
-        //       'https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js',
-        //       'src/scripts/6-main/Particle.js',
-        //       'src/scripts/6-main/ParticleSystem.js',
-        //       'src/scripts/6-main/sketch.js',
-        //     ]);
-        // }, 3000);
-        // if (next.namespace === 'introduction') loadScripts(['https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js', 'src/scripts/walker.js']);
+//         // setTimeout(() => {
+//         //   if (next.namespace === 'home')
+//         //     loadScripts([
+//         //       'https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js',
+//         //       'src/scripts/6-main/Particle.js',
+//         //       'src/scripts/6-main/ParticleSystem.js',
+//         //       'src/scripts/6-main/sketch.js',
+//         //     ]);
+//         // }, 3000);
+//         // if (next.namespace === 'introduction') loadScripts(['https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js', 'src/scripts/walker.js']);
 
-        // setTimeout(() => {
-        //   if (next.namespace === 'home')
-        //     loadScripts([
-        //       'https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js',
-        //       'src/scripts/6-main/Particle.js',
-        //       'src/scripts/6-main/ParticleSystem.js',
-        //       'src/scripts/6-main/sketch.js',
-        //     ]);
-        //   if (next.namespace === 'introduction') loadScripts(['https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js', 'src/scripts/walker.js']);
-        // }, 5000);
-      },
+//         // setTimeout(() => {
+//         //   if (next.namespace === 'home')
+//         //     loadScripts([
+//         //       'https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js',
+//         //       'src/scripts/6-main/Particle.js',
+//         //       'src/scripts/6-main/ParticleSystem.js',
+//         //       'src/scripts/6-main/sketch.js',
+//         //     ]);
+//         //   if (next.namespace === 'introduction') loadScripts(['https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js', 'src/scripts/walker.js']);
+//         // }, 5000);
+//       },
 
-      async once({ current, next, trigger }) {
-        // if (next.namespace === 'home')
-        //   loadScripts([
-        //     'https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js',
-        //     'src/scripts/6-main/Particle.js',
-        //     'src/scripts/6-main/ParticleSystem.js',
-        //     'src/scripts/6-main/sketch.js',
-        //   ]);
-        // if (next.namespace === 'introduction') loadScripts(['https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js', 'src/scripts/walker.js']);
-        // console.log(next.namespace);
-        contentAnimation();
-      },
-    },
-  ],
-});
+//       async once({ current, next, trigger }) {
+//         // if (next.namespace === 'home')
+//         //   loadScripts([
+//         //     'https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js',
+//         //     'src/scripts/6-main/Particle.js',
+//         //     'src/scripts/6-main/ParticleSystem.js',
+//         //     'src/scripts/6-main/sketch.js',
+//         //   ]);
+//         // if (next.namespace === 'introduction') loadScripts(['https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js', 'src/scripts/walker.js']);
+//         // console.log(next.namespace);
+//         contentAnimation();
+//       },
+//     },
+//   ],
+// });
 
 // function loadScripts(sources) {
 //   setTimeout(() => {
