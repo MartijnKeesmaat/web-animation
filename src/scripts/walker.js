@@ -7,9 +7,9 @@ const isDarkMode = document.body.classList.contains('dark-mode');
 let walker;
 
 function setup() {
-  const canvas = document.querySelector('#sketch__canvas-intro');
+  const canvas = document.querySelector('.sketch__canvas');
   const cnv = createCanvas(canvas.offsetWidth, canvas.offsetHeight);
-  cnv.parent('sketch__canvas-intro');
+  cnv.parent('sketch__canvas-cover');
   walker = new Walker();
   if (isDarkMode) background('#020202');
   else background('#f0f0ec');

@@ -9,15 +9,69 @@
   </head>
 
   <body class="is-loading">
+    <!-- Drawer -->
+    <aside class="drawer-nav">
+      <a href="index.html">
+        <img src="assets/img/logo.svg" />
+      </a>
+      <nav>
+        <ol start="0">
+          <li class="nav-link nav-link--active"><a href="index.html">Introduction</a></li>
+          <li class="nav-link"><a href="vectors.html">Vectors</a></li>
+          <li class="nav-link"><a href="forces.html">Forces</a></li>
+          <li class="nav-link"><a href="oscillation.html">Oscillation</a></li>
+          <li class="nav-link"><a href="particle-system.html">Particle Systems</a></li>
+          <li class="nav-link nav-link--inactive"><a href="">Physics Libraries</a></li>
+          <li class="nav-link"><a href="autonomous-agents.html">Autonomous Agents</a></li>
+          <li class="nav-link nav-link--inactive"><a href="">Cellular Automata</a></li>
+          <li class="nav-link nav-link--inactive"><a href="">Fractals</a></li>
+          <li class="nav-link nav-link--inactive"><a href="">The Evolution of Code</a></li>
+          <li class="nav-link nav-link--inactive"><a href=""> Neural Networks</a></li>
+        </ol>
+      </nav>
+
+      <section class="socials">
+        <a href="https://github.com/MartijnKeesmaat/web-animation"><img src="assets/img/socials/github.svg" alt="" /></a>
+        <a href="https://codepen.io/collection/DQaGxw"><img src="assets/img/socials/codepen.svg" alt="" /></a>
+        <a href="https://editor.p5js.org/MAKE/sketches"><img src="assets/img/socials/p5.svg" alt="" /></a>
+        <a href="https://www.notion.so/martijnkeesmaat/Nature-of-Code-3cb8fbeba1704e15a2974ce85e5ee3fd"><img src="assets/img/socials/notes.svg" alt="" /></a>
+      </section>
+    </aside>
+
     <div class="loading">
       <p>Loading...</p>
     </div>
 
-    <ul class="transition">
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
+    <div class="overlay"></div>
+
+    <header class="mobile-header">
+      <div class="ham">
+        <!-- Hamburger menu -->
+        <a class="hamburger-menu drawer-nav__trigger">
+          <div class="hamburger-icon">
+            <div class="hamburger-icon__stripe hamburger-icon__stripe-top"></div>
+            <div class="hamburger-icon__stripe hamburger-icon__stripe-middle"></div>
+            <div class="hamburger-icon__stripe hamburger-icon__stripe-bottom"></div>
+          </div>
+        </a>
+      </div>
+
+      <!-- <nav class="mobile-nav">
+        <ol start="0">
+          <li class="nav-link nav-link--active"><a href="index.html">Introduction</a></li>
+          <li class="nav-link"><a href="vectors.html">Vectors</a></li>
+          <li class="nav-link"><a href="forces.html">Forces</a></li>
+          <li class="nav-link"><a href="oscillation.html">Oscillation</a></li>
+          <li class="nav-link"><a href="particle-system.html">Particle Systems</a></li>
+          <li class="nav-link nav-link--inactive"><a href="">Physics Libraries</a></li>
+          <li class="nav-link"><a href="autonomous-agents.html">Autonomous Agents</a></li>
+          <li class="nav-link nav-link--inactive"><a href="">Cellular Automata</a></li>
+          <li class="nav-link nav-link--inactive"><a href="">Fractals</a></li>
+          <li class="nav-link nav-link--inactive"><a href="">The Evolution of Code</a></li>
+          <li class="nav-link nav-link--inactive"><a href=""> Neural Networks</a></li>
+        </ol>
+      </nav> -->
+    </header>
 
     <aside>
       <a href="index.html">
@@ -39,9 +93,10 @@
         </ol>
       </nav>
       <section class="socials">
-        <a href=""><img src="assets/img/socials/notes.svg" alt="" /></a>
-        <a href=""><img src="assets/img/socials/github.svg" alt="" /></a>
-        <a href=""><img src="assets/img/socials/codepen.svg" alt="" /></a>
+        <a href="https://github.com/MartijnKeesmaat/web-animation"><img src="assets/img/socials/github.svg" alt="" /></a>
+        <a href="https://codepen.io/collection/DQaGxw"><img src="assets/img/socials/codepen.svg" alt="" /></a>
+        <a href="https://editor.p5js.org/MAKE/sketches"><img src="assets/img/socials/p5.svg" alt="" /></a>
+        <a href="https://www.notion.so/martijnkeesmaat/Nature-of-Code-3cb8fbeba1704e15a2974ce85e5ee3fd"><img src="assets/img/socials/notes.svg" alt="" /></a>
       </section>
     </aside>
 
@@ -50,13 +105,16 @@
         <div class="sketch__poster">
           <div class="sketch__top">
             <div class="sketch__things">
-              <h1 class="sketch__title">random walker</h1>
-              <!-- <p>chris riley</p> -->
+              <h1 class="sketch__title">after the mass-age</h1>
+              <p class="sketch__author">chris riley</p>
             </div>
 
-            <button class="sketch__refresh">Refresh the Sketch</button>
+            <button class="sketch__refresh">
+              <!-- <img src="assets/img/refresh.svg" alt="" /> -->
+              Refresh the Sketch
+            </button>
           </div>
-          <div id="sketch__canvas-intro" class="sketch__canvas"></div>
+          <div id="sketch__canvas-cover" class="sketch__canvas"></div>
           <div class="sketch__bottom">
             <p class="sketch__desc">A random pattern will be drawn each time</p>
           </div>
@@ -65,8 +123,13 @@
 
       <article class="sketch-details">
         <div class="sketch-details__top">
-          <button class="sketch-details__btn sketch-details__btn--active">About this Project</button>
-          <button class="sketch-details__btn">Settings</button>
+          <button class="sketch-details__btn sketch-details__btn--active">
+            About this Project
+          </button>
+          <button class="sketch-details__btn">
+            <img src="assets/img/external.svg" alt="" />
+            By Marijn Keesmaat
+          </button>
         </div>
         <div class="sketch-details__middle">
           <p>
@@ -87,15 +150,32 @@
           </div>
         </div>
         <div class="sketch-details__bottom">
-          <p>Find out how this feature works by learning from Daniel Shiffman</p>
-          <p>/Users/martijn/Google\ Drive/CMD/minor/bewegende-dingen-vak/sketch06</p>
+          <p>/Users/martijn/CMD/minor/bewegende-dingen-vak/sketch06</p>
         </div>
       </article>
 
-      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
-        <script src="src/scripts/walker.js"></script> -->
+      <div class="mobile-details">
+        <div class="sketch-arrows">
+          <button class="sketch-arrow sketch-arrow--left">
+            <a href="about.html">
+              <img src="assets/img/arrow-left.svg" alt="" />
+            </a>
+          </button>
+
+          <div class="mobile-details-text">
+            <h2>Mouse through the grid, tap & hold</h2>
+          </div>
+
+          <button class="sketch-arrow sketch-arrow--right">
+            <a href="about.html">
+              <img src="assets/img/arrow-right.svg" alt="" />
+            </a>
+          </button>
+        </div>
+      </div>
     </main>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
-    <script src="src/scripts/walker.js"></script>
+    <script src="src/scripts/2/vector.js"></script>
   </body>
 </html>
