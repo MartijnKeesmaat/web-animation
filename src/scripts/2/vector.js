@@ -12,7 +12,7 @@ Mover.prototype.update = function () {
   this.acceleration = this.mousePos;
   this.velocity.add(this.acceleration);
   this.position.add(this.velocity);
-  this.velocity.limit(7);
+  this.velocity.limit(10);
 };
 
 Mover.prototype.draw = function () {
