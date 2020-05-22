@@ -27,3 +27,148 @@
     right: 30px
 
     display: block
+
+  .sketch-details__btn
+    display: none
+
+// /*------------------------------------*\
+//   #DRAWER NAVIGATION
+// \*------------------------------------*/
+
+aside.drawer-nav
+  position: fixed
+  z-index: 80
+  top: 0
+  left: 0
+
+  display: block !important
+  overflow-y: scroll
+
+  width: 100%
+  max-width: 300px
+  height: 100vh
+  padding: 40px
+
+  transition: .3s all ease
+  transform: translateX(-100%)
+
+  background: #f0f0ec
+
+  nav
+    display: flex
+    flex-direction: column
+
+    margin-bottom: 0px
+
+  .nav-link
+    font-size: 1.7rem
+    line-height: 2.7
+
+.drawer-nav__item
+  display: block
+
+  padding: 15px 40px
+
+  font-size: 2.1rem
+
+  &:hover
+    background: black
+
+// Hamburger icon
+.hamburger-menu
+  position: absolute
+  right: 0px
+
+.hamburger-icon
+  position: relative
+
+  display: flex
+  align-items: center
+
+  width: 25px
+  height: 25px
+
+  cursor: pointer
+
+  &__stripe
+    position: absolute
+
+    width: 100%
+    height: 3px
+
+    transition: .3s all ease
+
+    background: #FF373D
+
+    &-top
+      transform: translateY(8px)
+
+    &-bottom
+      transform: translateY(-8px)
+
+// Overlay
+.overlay-body
+  position: fixed
+  z-index: 70
+  top: 0
+  left: 0
+
+  display: none
+
+  width: 100vw
+  height: 120vh
+
+  cursor: pointer
+
+  background: rgba(black, 0.3)
+
+.drawer-active
+  .overlay-body
+    display: block
+
+  .drawer-nav
+    transform: translateX(0)
+
+  .hamburger-icon__stripe-top,
+  .hamburger-icon__stripe-middle
+    transform: rotate(45deg)
+
+  .hamburger-icon__stripe-bottom
+    transform: rotate(-45deg)
+
+@media(max-width: 800px)
+  .sketch-details, button.sketch__refresh, .sketch__bottom
+    display: none
+
+  .sketch__poster
+    width: 100%
+
+  .sketch__top
+    margin-bottom: 20px
+
+  main
+    flex-direction: column
+
+  .sketch
+    height: initial
+
+  div.mobile-details
+    display: block
+
+.mobile-details-text h2
+  max-width: 230px
+  margin: 0 auto
+
+  text-align: center
+
+  font-size: 1.4rem
+
+.mobile-details .sketch-arrows
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+  padding: 0 3rem
+
+.mobile-details
+  display: none

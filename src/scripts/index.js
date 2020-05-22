@@ -199,3 +199,17 @@ document.body.addEventListener('keypress', function (e) {
     document.body.classList.add('dark-mode');
   }
 });
+/*------------------------------------*\
+  #MOBILE NAV
+\*------------------------------------*/
+
+document.body.innerHTML += '<div class="overlay-body drawer-nav__trigger"></div>';
+
+const triggers = document.querySelectorAll('.drawer-nav__trigger');
+
+triggers.forEach((e) =>
+  e.addEventListener('click', function () {
+    console.log('wtf');
+    document.body.classList.toggle('drawer-active');
+  })
+);

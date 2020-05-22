@@ -24,12 +24,24 @@ module.exports = {
       template: Path.resolve(__dirname, '../src/index.html'),
     }),
     new HtmlWebpackPlugin({
-      filename: 'about.html',
-      template: './src/about.html',
+      filename: 'vectors.html',
+      template: './src/vectors.html',
     }),
     new HtmlWebpackPlugin({
-      filename: 'introduction.html',
-      template: './src/introduction.html',
+      filename: 'forces.html',
+      template: './src/forces.html',
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'oscillation.html',
+      template: './src/oscillation.html',
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'particle-system.html',
+      template: './src/particle-system.html',
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'autonomous-agents.html',
+      template: './src/autonomous-agents.html',
     }),
   ],
   resolve: {

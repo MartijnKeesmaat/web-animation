@@ -8,7 +8,11 @@
     <meta name="author" content="Martijn Keesmaat" />
   </head>
 
-  <body data-barba="wrapper">
+  <body class="is-loading">
+    <div class="loading">
+      <p>Loading...</p>
+    </div>
+
     <ul class="transition">
       <li></li>
       <li></li>
@@ -21,13 +25,13 @@
       </a>
       <nav>
         <ol start="0">
-          <li class="nav-link"><a href="index.html">Introduction</a></li>
-          <li class="nav-link"><a href="about.html">Vectors</a></li>
-          <li class="nav-link"><a href="">Forces</a></li>
-          <li class="nav-link"><a href="">Oscillation</a></li>
-          <li class="nav-link"><a href="">Particle Systems</a></li>
+          <li class="nav-link nav-link--active"><a href="index.html">Introduction</a></li>
+          <li class="nav-link"><a href="vectors.html">Vectors</a></li>
+          <li class="nav-link"><a href="forces.html">Forces</a></li>
+          <li class="nav-link"><a href="oscillation.html">Oscillation</a></li>
+          <li class="nav-link"><a href="particle-system.html">Particle Systems</a></li>
           <li class="nav-link nav-link--inactive"><a href="">Physics Libraries</a></li>
-          <li class="nav-link nav-link--inactive"><a href="">Autonomous Agents</a></li>
+          <li class="nav-link"><a href="autonomous-agents.html">Autonomous Agents</a></li>
           <li class="nav-link nav-link--inactive"><a href="">Cellular Automata</a></li>
           <li class="nav-link nav-link--inactive"><a href="">Fractals</a></li>
           <li class="nav-link nav-link--inactive"><a href="">The Evolution of Code</a></li>
@@ -41,15 +45,21 @@
       </section>
     </aside>
 
-    <main data-barba="container" data-barba-namespace="about">
+    <main>
       <article class="sketch">
-        <div class="sketch__top">
-          <h1 class="sketch__title">Random Walker</h1>
-          <button class="sketch__refresh">Refresh the Sketch</button>
-        </div>
-        <canvas class="sketch__canvas"></canvas>
-        <div class="sketch__bottom">
-          <p class="sketch__desc">A random pattern will be drawn each time</p>
+        <div class="sketch__poster">
+          <div class="sketch__top">
+            <div class="sketch__things">
+              <h1 class="sketch__title">random walker</h1>
+              <!-- <p>chris riley</p> -->
+            </div>
+
+            <button class="sketch__refresh">Refresh the Sketch</button>
+          </div>
+          <div id="sketch__canvas-intro" class="sketch__canvas"></div>
+          <div class="sketch__bottom">
+            <p class="sketch__desc">A random pattern will be drawn each time</p>
+          </div>
         </div>
       </article>
 
@@ -61,7 +71,7 @@
         <div class="sketch-details__middle">
           <p>
             A random walker is an entity that follows a path based on a randomly generated input. This one simply draws a single point moves 5 steps and draws another.
-            This is done based on a number generator which ranges from 1 to 4. For each number it will move into a direction.
+            This is done based on a number generator which ranges from 1 to 4. For each number it will move into a specific direction.
           </p>
           <div class="sketch-arrows">
             <button class="sketch-arrow sketch-arrow--left">
@@ -81,6 +91,11 @@
           <p>/Users/martijn/Google\ Drive/CMD/minor/bewegende-dingen-vak/sketch06</p>
         </div>
       </article>
+
+      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+        <script src="src/scripts/walker.js"></script> -->
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+    <script src="src/scripts/walker.js"></script>
   </body>
 </html>
