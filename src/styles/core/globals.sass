@@ -272,3 +272,30 @@ main
 
   .sketch__bottom
     display: none !important
+
+button.sketch__refresh,
+.sketch-details__btn
+  display: flex
+  align-items: center
+
+  img
+    height: 20px
+    margin-right: 5px
+
+.overlay
+  position: fixed
+
+  width: 100vw
+  height: 100vh
+
+  transition: .3s all ease
+  pointer-events: none
+
+  opacity: 0
+  background: #97d8c6
+
+  mix-blend-mode: difference
+  z-index: 10
+
+  &.--is-active
+    opacity: 1

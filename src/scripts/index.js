@@ -188,3 +188,14 @@ import { loadWalker } from './walker';
 // });
 
 // SingleNews.init();
+
+const colors = ['#97d8c6', '#cace95', '#a695ce', '#c595ce', '#f0ffef'];
+const overlay = document.querySelector('.overlay');
+
+document.body.addEventListener('keypress', function (e) {
+  if (key === 'r') {
+    overlay.classList.add('--is-active');
+    overlay.style.background = colors[Math.floor(Math.random() * colors.length)];
+    document.body.classList.add('dark-mode');
+  }
+});

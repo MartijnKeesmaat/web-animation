@@ -20,7 +20,6 @@ class ParticleSystem {
         this.particles.push(new Particle(this.size, position.x, position.y));
       });
     });
-    document.body.classList.remove('is-loading');
   }
 
   createGrid() {
@@ -44,6 +43,7 @@ class ParticleSystem {
   }
 
   run() {
+    document.body.classList.remove('is-loading');
     for (let particle of this.particles) {
       particle.behaviors();
       particle.update();
