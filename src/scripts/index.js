@@ -190,13 +190,18 @@ import { loadWalker } from './walker';
 // SingleNews.init();
 
 const colors = ['#97d8c6', '#cace95', '#a695ce', '#c595ce', '#f0ffef'];
-const overlay = document.querySelector('.overlay');
+
+const overlay = document.createElement('div');
+overlay.classList.add('color-overlay');
+// const overlay = document.querySelector('.color-overlay');
 
 document.body.addEventListener('keypress', function (e) {
   if (key === 'r') {
+    console.log(overlay);
     overlay.classList.add('--is-active');
     overlay.style.background = colors[Math.floor(Math.random() * colors.length)];
     document.body.classList.add('dark-mode');
+    document.body.appendChild(overlay);
   }
 });
 /*------------------------------------*\
@@ -209,7 +214,6 @@ const triggers = document.querySelectorAll('.drawer-nav__trigger');
 
 triggers.forEach((e) =>
   e.addEventListener('click', function () {
-    console.log('wtf');
     document.body.classList.toggle('drawer-active');
   })
 );

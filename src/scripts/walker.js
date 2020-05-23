@@ -11,8 +11,8 @@ function setup() {
   const cnv = createCanvas(canvas.offsetWidth, canvas.offsetHeight);
   cnv.parent('sketch__canvas-cover');
   walker = new Walker();
-  if (isDarkMode) background('#020202');
-  else background('#f0f0ec');
+  background('rgba(0,0,0,0)');
+  clear();
   document.body.classList.remove('is-loading');
 }
 
