@@ -18,11 +18,11 @@ This immediately made me think about certain interactions. Like moving your mous
 ## Technical approach
 I needed to do research to be able to understand the technical solution. Which let me to the work of Daniel Shiffman on [The Nature of Code](https://www.youtube.com/user/shiffman/playlists?view=50&sort=dd&shelf_id=6T). Finding this resource made me change the concept a bit:
 
-> Read and watch the Nature of Code untill you are able to create the effects you initially had in mind
+> Read and watch the Nature of Code until you are able to create the effects you initially had in mind
 
-So I did that. After going through 6 chapters I was able create those effects. There were about 30-40 digital sketches created to learn the techniques. 
+So I did that. After going through 6 chapters I was able to create those effects. There were about 30-40 digital sketches created to learn the techniques. 
 
-To show some of the process I decided to present one "art-work" per chapter. Each one highlighting a specific technique
+To show some of the processes I decided to present one "art-work" per chapter. Each one highlighting a specific technique
 
 ## Learning goals
 - How to use P5 to create generative art
