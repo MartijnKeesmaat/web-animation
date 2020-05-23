@@ -1,3 +1,6 @@
+.mobile-spotlight
+  display: none
+
 .mobile-header
   position: fixed
 
@@ -155,6 +158,9 @@ aside.drawer-nav
   div.mobile-details
     display: block
 
+  .mobile-spotlight
+    display: block
+
 .mobile-details-text h2
   max-width: 230px
   margin: 0 auto
@@ -171,4 +177,17 @@ aside.drawer-nav
   padding: 0 3rem
 
 .mobile-details
+  position: fixed
+  z-index: 2
+  right: 0
+  bottom: 0
+  left: 0
+
   display: none
+  align-items: center
+  justify-content: space-between
+
+  width: 100vw
+  padding: 2.1rem 3rem
+
+  background: #f0f0ec

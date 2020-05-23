@@ -72,4 +72,38 @@
 .sketch__author
   margin-top: -2px
 
-  font-size: 2rem
+  font-size: 1.7rem
+
+.mobile-details-text h2:after
+  content: ' toggle details'
+  text-decoration: underline
+
+  color: rgba(black, .7)
+
+  font-style: italic
+
+.mobile-spotlight
+  position: fixed
+  z-index: 1
+  right: 0
+  bottom: 90px
+  left: 0
+
+  width: calc(100vw - 60px)
+  margin: 0 auto
+  padding: 30px 20px
+
+  transition: .3s all ease
+  transform: translateY(140%)
+
+  color: black
+  border-bottom: 1px solid rgba(#000, .1)
+  background: #f0f0ec
+
+  p
+    font-family: 'Futura New Book'
+    font-size: 1.4rem
+    line-height: 1
+
+  &.--is-active
+    transform: translate(0)

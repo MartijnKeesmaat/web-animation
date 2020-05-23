@@ -215,3 +215,10 @@ triggers.forEach((e) =>
     document.body.classList.toggle('drawer-active');
   })
 );
+
+const details = document.querySelector('.mobile-details');
+const spot = document.querySelector('.mobile-spotlight');
+
+details.addEventListener('click', function (e) {
+  spot.classList.toggle('--is-active');
+});
