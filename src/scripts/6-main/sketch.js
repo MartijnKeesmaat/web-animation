@@ -14,3 +14,12 @@ function draw() {
   clear();
   system.run();
 }
+
+document.addEventListener('DOMContentLoaded', init, false);
+function init() {
+  function reset() {
+    system.reset();
+  }
+  var button = document.querySelector('.sketch__refresh');
+  button.addEventListener('click', reset, true);
+}

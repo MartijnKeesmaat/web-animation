@@ -8,6 +8,10 @@ class ParticleSystem {
     this.particles.push(new Particle(this.origin.x, this.origin.y));
   }
 
+  reset() {
+    this.particles = [];
+  }
+
   run() {
     for (let particle of this.particles) {
       particle.run();

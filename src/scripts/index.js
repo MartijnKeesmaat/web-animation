@@ -3,8 +3,6 @@ import './pace.min.js';
 import gsap from 'gsap';
 // import barba from '@barba/core';
 
-import { loadWalker } from './walker';
-
 // const scriptContainer = document.querySelector('.scripts');
 // import './walker.js';
 

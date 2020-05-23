@@ -17,7 +17,7 @@ Attractor.prototype.calculateAttraction = function (m) {
   // distance between the mover and the attractor
   const force = p5.Vector.sub(this.position, m.position);
   let distance = force.mag();
-  distance = constrain(distance, 3, 10);
+  distance = constrain(distance, 1, 10);
 
   force.normalize();
   const strength = (this.G * this.mass * m.mass) / (distance * distance);
@@ -60,6 +60,10 @@ Attractor.prototype.handleHover = function (mx, my) {
 
 Attractor.prototype.stopDragging = function () {
   this.dragging = false;
+};
+
+Attractor.prototype.reset = function () {
+  this.position = createVector(width / 2, height / 2);
 };
 
 Attractor.prototype.handleDrag = function (mx, my) {

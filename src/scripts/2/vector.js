@@ -28,6 +28,10 @@ Mover.prototype.checkEdges = function () {
   if (this.position.y > height) this.position.y = 0;
 };
 
+Mover.prototype.reset = function () {
+  this.position = createVector(random(width), random(height));
+};
+
 let movers = [];
 
 function setup() {
@@ -50,4 +54,15 @@ function draw() {
     mover.draw();
     mover.checkEdges();
   });
+}
+
+document.addEventListener('DOMContentLoaded', init, false);
+function init() {
+  function reset() {
+    movers.forEach((mover) => {
+      mover.reset();
+    });
+  }
+  var button = document.querySelector('.sketch__refresh');
+  button.addEventListener('click', reset, true);
 }

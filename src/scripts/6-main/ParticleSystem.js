@@ -42,6 +42,12 @@ class ParticleSystem {
     );
   }
 
+  reset() {
+    this.particles.forEach((particle) => {
+      particle.pos = createVector(width / 2, height / 2);
+    });
+  }
+
   run() {
     document.body.classList.remove('is-loading');
     for (let particle of this.particles) {

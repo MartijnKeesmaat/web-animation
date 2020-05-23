@@ -12,7 +12,7 @@ function setup() {
   const cnv = createCanvas(canvas.offsetWidth, canvas.offsetHeight);
   cnv.parent('sketch__canvas-cover');
 
-  for (var i = 0; i < 70; i++) {
+  for (var i = 0; i < 50; i++) {
     movers[i] = new Mover(random(0.1, 1), random(width), random(height));
   }
   attractor = new Attractor();
@@ -49,4 +49,17 @@ function mouseDragged() {
 
 function mouseReleased() {
   attractor.stopDragging();
+}
+
+document.addEventListener('DOMContentLoaded', init, false);
+function init() {
+  function reset() {
+    attractor.reset();
+    movers.forEach((mover) => {
+      // console.log(mover);
+      mover.reset();
+    });
+  }
+  var button = document.querySelector('.sketch__refresh');
+  button.addEventListener('click', reset, true);
 }
