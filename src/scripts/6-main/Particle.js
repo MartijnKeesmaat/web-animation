@@ -19,10 +19,12 @@ class Particle {
     flee.mult(5);
     seek.mult(10);
 
-    this.applyForce(arrive);
     // this.applyForce(flee);
     if (mouseIsPressed) this.applyForce(seek);
-    else this.applyForce(flee);
+    else {
+      this.applyForce(flee);
+      this.applyForce(arrive);
+    }
   }
 
   applyForce(f) {
